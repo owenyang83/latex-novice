@@ -307,4 +307,4 @@ Hyphens, nuts and mutton are entered using "-", "--" and "---" respectively.
 >
 > See whether you can generate something like the following output:
 
-![](knuth-example.png)
+![](fig/knuth-example.png)
