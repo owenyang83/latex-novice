@@ -306,5 +306,5 @@ Hyphens, nuts and mutton are entered using "-", "--" and "---" respectively.
 > ## Escapism {.challenge}
 >
 > See whether you can generate something like the following output:
->
-> ![](knuth-example.png)
+
+![](knuth-example.png)
