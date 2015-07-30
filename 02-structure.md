@@ -18,9 +18,9 @@ minutes:
 
 Although TeX is suitable for small, uncomplicated projects,
 it does not automate many tasks without additional work.
-LaTeX on the other hand does not require any programming ability.
-It already knows how to switch between different document types,
+LaTeX fixes this with the ability to quicklyswitch between different document types,
 keep track of sectioning, manage cross-references, and much more.
+Unlike TeX, LaTeX does not require any knowledge of programming.
 
 We will now have a look at the basic structure required to set up any LaTeX project.
 
@@ -52,15 +52,16 @@ For example, to begin an article, you would make the first line of your document
 \documentclass{article}
 ~~~
 
-Other document classes are available if you install them;
-how best to do this partly depends on your operating system.
+Other document classes are available if you install them.
+How best to do this partly depends on your operating system.
+
 In fact, some of the non-default classes are used much more often than the ones
 listed above.
 For example, to make a presentation in LaTeX,
-most people will use *beamer* rather than slides;
+most people will use *beamer* rather than Slides;
 and when people use LaTeX for writing long books,
 *memoir* is a popular document class.
-However, in these lessons, we'll focus on the article and report classes.
+However, in these lessons, we'll focus on the built-in article and report classes.
 
 The body is where you place the content of your document.
 The body is always between a `\begin{document}` and an `\end{document}`.
@@ -79,16 +80,29 @@ hello world
 As you can see, this is a bit longer and more complicated than the simplest
 plain TeX document.
 It pays off, though, because now some infrastructure is in place that lets
-us get to work on a realistic document.
+us get to work on non-trivial projects.
 
-First of all, we want a title.
-In the preamble, we use the `\title` and `\author` command words.
-Then in the body we use the `\maketitle` command word:
+> ## A first LaTeX document {.challenge}
+> 
+> At the end of the previous lesson on plain TeX,
+> you created a small document that tested your knowledge
+> of dashes, quotation marks and other special characters.
+> 
+> Now rewrite that document as a LaTeX document,
+> then compile it using `pdflatex` (instead of `pdftex`).
+
+To walk through the creation of a larger project,
+let's now imagine a scenario where someone wants to use LaTeX to write an article.
+
+
+We'll now have a look at how to add a title.
+In the *preamble*, we use the `\title` and `\author` command words.
+Then in the *body* we use the `\maketitle` command word:
 
 ~~~ {.tex}
 \documentclass{article}
-\title{Hello World}
-\author{Waggleton P. Tallylicker}
+\title{}
+\author{}
 \begin{document}
 \maketitle
 \end{document}
@@ -96,15 +110,15 @@ Then in the body we use the `\maketitle` command word:
 
 Compiling it shows something like this prominently:
 
-![](fig/02-helloworld.png)
+![](fig/02-.png)
 
 A lot of the time when we generate an article, we don't want the date in the title.
 You can suppress it by adding an empty date to the preamble:
 
 ~~~ {.tex}
 \documentclass{article}
-\title{Hello World}
-\author{Waggleton P. Tallylicker}
+\title{}
+\author{}
 \date{}
 \begin{document}
 \maketitle
@@ -116,29 +130,42 @@ Let's add a standard essay structure with an introduction, a body and a conclusi
 
 ~~~ {.tex}
 \documentclass{article}
-\title{Hello World}
-\author{Waggleton P. Tallylicker}
+\title{}
+\author{}
 \date{}
 \begin{document}
 \maketitle
 
-\section{Introduction}
-
-The existing literature does not adequately answer the question of,
-``What even is internets?''
+\part{Introduction}
 
 
-\section{Body}
-
-We propose a solution that involves drinking large volumes of coffee.
+\section{}
 
 
-\section{Conclusion}
+\section{}
 
-There are still open problems that require more work.
+
+\part{Body}
+
+
+\section{}
+
+
+\section{}
+
+
+\part{Conclusion}
+
+
+\section{}
+
+
+\section{}
 
 
 \end{document}
 ~~~
 
-![](fig/02-sections.png)
+![](fig/02-.png)
+
+Now that we have 
