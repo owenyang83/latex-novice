@@ -18,7 +18,7 @@ minutes:
 
 Although TeX is suitable for small, uncomplicated projects,
 it does not automate many tasks without additional work.
-LaTeX fixes this with the ability to quicklyswitch between different document types,
+LaTeX fixes this with the ability to quickly switch between different document types,
 keep track of sectioning, manage cross-references, and much more.
 Unlike TeX, LaTeX does not require any knowledge of programming.
 
@@ -32,7 +32,7 @@ Every LaTeX document can be thought of as having two parts:
 The preamble is where we tell LaTeX what sort of document we're writing, 
 and which non-default resources we'd like to use.
 It is also a good place to customise the way we use LaTeX.
-For example, you can define your own command words,
+For example, we can define our own command words,
 or modify the behaviour of existing commands.
 
 Only one thing is required for the preamble:
@@ -55,12 +55,9 @@ For example, to begin an article, you would make the first line of your document
 Other document classes are available if you install them.
 How best to do this partly depends on your operating system.
 
-In fact, some of the non-default classes are used much more often than the ones
-listed above.
-For example, to make a presentation in LaTeX,
-most people will use *beamer* rather than Slides;
-and when people use LaTeX for writing long books,
-*memoir* is a popular document class.
+In fact, some of the non-default classes are used much more often than the ones listed above.
+For example, to make a presentation in LaTeX, most people will use *beamer* rather than Slides;
+and when people use LaTeX for writing long books, *memoir* is a popular document class.
 However, in these lessons, we'll focus on the built-in article and report classes.
 
 The body is where you place the content of your document.
@@ -77,8 +74,7 @@ hello world
 \end{document}
 ~~~
 
-As you can see, this is a bit longer and more complicated than the simplest
-plain TeX document.
+As you can see, this is a bit longer and more complicated than the simplest plain TeX document.
 It pays off, though, because now some infrastructure is in place that lets
 us get to work on non-trivial projects.
 
@@ -92,75 +88,114 @@ us get to work on non-trivial projects.
 > then compile it using `pdflatex` (instead of `pdftex`).
 
 To walk through the creation of a larger project,
-let's now imagine a scenario where someone wants to use LaTeX to write an article.
+we'll now begin to build up a template that you can use later.
 
+First we'll look at how to add a title.
+It is possible to write a title page from scratch, and this is the only way to
+do it if there is a particular style you want to achieve.
+However, for most cases it is possible to use much simpler built-in commands.
 
-We'll now have a look at how to add a title.
-In the *preamble*, we use the `\title` and `\author` command words.
-Then in the *body* we use the `\maketitle` command word:
+This needs to be done in two steps.
+First in the preamble we specify some fields using the `\title`, `\author` and `\date` command words.
+All these fields are optional.
+Then in the document body we use the `\maketitle` command word.
 
 ~~~ {.tex}
 \documentclass{article}
-\title{}
-\author{}
+\title{Hello World}
+\author{J. Smith}
 \begin{document}
 \maketitle
 \end{document}
 ~~~
 
-Compiling it shows something like this prominently:
+This compiles into a document that looks like this:
 
 ![](fig/02-.png)
 
 A lot of the time when we generate an article, we don't want the date in the title.
-You can suppress it by adding an empty date to the preamble:
+Let's suppress it by adding an empty date to the preamble:
 
 ~~~ {.tex}
 \documentclass{article}
-\title{}
-\author{}
+\title{Hello World}
+\author{J. Smith}
 \date{}
 \begin{document}
 \maketitle
 \end{document}
 ~~~
 
-Okay, we have an impressive title, but still no content.
-Let's add a standard essay structure with an introduction, a body and a conclusion.
+Now we'll add a standard essay structure with an introduction,
+a body and a conclusion, and some filler text so you can see how it all hangs together.
 
 ~~~ {.tex}
 \documentclass{article}
-\title{}
-\author{}
+\title{Hello World}
+\author{J. Smith}
 \date{}
 \begin{document}
 \maketitle
 
 \part{Introduction}
 
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit sem, diam accumsan.
+Tortor quis, porta mus mattis consequat curae venenatis est, natoque lobortis fusce ad.
+Dui sollicitudin.
+
 
 \section{}
 
+Lorem ipsum dolor sit.
+Suspendisse proin primis scelerisque risus hymenaeos aliquet dictum eros scelerisque.
+Primis et praesent tellus, tortor.
+
 
 \section{}
+
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit pede.
+Mauris feugiat aliquet odio arcu ridiculus litora, adipiscing pellentesque integer, dignissim diam scelerisque id, litora consectetuer tincidunt.
+Sagittis non, natoque a, scelerisque dis, diam diam bibendum.
 
 
 \part{Body}
 
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit orci netus elementum eros duis integer id, ante.
+Pellentesque feugiat nibh eu.
+Eget posuere consequat.
+
 
 \section{}
 
+Lorem ipsum.
+Urna iaculis amet, erat.
+Amet posuere pede, nisl, risus felis, class a, aliquam tempus, sit id arcu.
+
 
 \section{}
+
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit per.
+Risus phasellus praesent erat auctor cursus, morbi felis pharetra donec, ad nisi habitasse.
+Augue.
 
 
 \part{Conclusion}
 
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit eu lorem elementum.
+Aptent vulputate ad, mollis nec, odio.
+Laoreet ve, faucibus bibendum, felis enim duis.
+
 
 \section{}
 
+Lorem ipsum.
+Ridiculus.
+Ornare a, vestibulum sem, fusce vivamus nam, nostra.
+
 
 \section{}
+
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit in. Ridiculus. Eros.
 
 
 \end{document}
@@ -168,4 +203,3 @@ Let's add a standard essay structure with an introduction, a body and a conclusi
 
 ![](fig/02-.png)
 
-Now that we have 
