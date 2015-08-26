@@ -144,14 +144,14 @@ Tortor quis, porta mus mattis consequat curae venenatis est, natoque lobortis fu
 Dui sollicitudin.
 
 
-\section{}
+\section{Nullam proin blandit ac felis suspendisse ac ornare eleifend}
 
 Lorem ipsum dolor sit.
 Suspendisse proin primis scelerisque risus hymenaeos aliquet dictum eros scelerisque.
 Primis et praesent tellus, tortor.
 
 
-\section{}
+\section{Rhoncus}
 
 Lorem ipsum dolor sit amet, consecteteur adipiscing elit pede.
 Mauris feugiat aliquet odio arcu ridiculus litora, adipiscing pellentesque integer, dignissim diam scelerisque id, litora consectetuer tincidunt.
@@ -165,14 +165,14 @@ Pellentesque feugiat nibh eu.
 Eget posuere consequat.
 
 
-\section{}
+\section{Montes, aptent purus class}
 
 Lorem ipsum.
 Urna iaculis amet, erat.
 Amet posuere pede, nisl, risus felis, class a, aliquam tempus, sit id arcu.
 
 
-\section{}
+\section{Sem}
 
 Lorem ipsum dolor sit amet, consecteteur adipiscing elit per.
 Risus phasellus praesent erat auctor cursus, morbi felis pharetra donec, ad nisi habitasse.
@@ -186,14 +186,14 @@ Aptent vulputate ad, mollis nec, odio.
 Laoreet ve, faucibus bibendum, felis enim duis.
 
 
-\section{}
+\section{Turpis curabitur purus lobortis felis lacinia accumsan cubilia ipsum potenti nibh}
 
 Lorem ipsum.
 Ridiculus.
 Ornare a, vestibulum sem, fusce vivamus nam, nostra.
 
 
-\section{}
+\section{Ligula tincidunt vitae}
 
 Lorem ipsum dolor sit amet, consecteteur adipiscing elit in. Ridiculus. Eros.
 
@@ -203,3 +203,26 @@ Lorem ipsum dolor sit amet, consecteteur adipiscing elit in. Ridiculus. Eros.
 
 ![](fig/02-.png)
 
+
+In the latest document, you might start to notice some aspects of formatting
+that aren't to your taste.
+For example, most people will find the text a bit small.
+Also, the default LaTeX paper size is Letter,
+whereas A4 is preferred by most people outside the United States.
+We'll have a deeper look at formatting in the next lesson,
+and later look at how to write your own classes with different defaults.
+for the moment you can (optionally) make the first line of your document look like so:
+
+~~~ {.tex}
+\documentclass[12pt,a4paper]{article}
+~~~
+
+(Note that this use of square brackets is standard LaTeX notation for setting options.)
+
+Now that we have a document structure in place, we notice it's missing a table of contents.
+For short articles, it would be quite reasonable for this to not be required;
+however, let's pre-empt the case where you want to write a longer document.
+
+This is a point where LaTeX has some behaviour that needs getting used to.
+In particular, when first generating a table of contents,
+you will need to compile your document *twice*.
