@@ -189,13 +189,15 @@ Laoreet ve, faucibus bibendum, felis enim duis.
 \section{Turpis curabitur purus lobortis felis lacinia accumsan cubilia ipsum potenti nibh}
 
 Lorem ipsum.
-Ridiculus.
 Ornare a, vestibulum sem, fusce vivamus nam, nostra.
+Duis at bibendum blandit nunc erat donec.
 
 
 \section{Ligula tincidunt vitae}
 
-Lorem ipsum dolor sit amet, consecteteur adipiscing elit in. Ridiculus. Eros.
+Lorem ipsum dolor sit amet, consecteteur adipiscing elit in.
+Diam, duis eget gravida urna, duis urna hymenaeos.
+Lorem proin.
 
 
 \end{document}
@@ -209,9 +211,11 @@ that aren't to your taste.
 For example, most people will find the text a bit small.
 Also, the default LaTeX paper size is Letter,
 whereas A4 is preferred by most people outside the United States.
+
 We'll have a deeper look at formatting in the next lesson,
-and later look at how to write your own classes with different defaults.
-for the moment you can (optionally) make the first line of your document look like so:
+and later look at how to write your own classes.
+These topics will open up a lot of ways to change the defaults.
+For the moment you can (optionally) make the first line of your document look like so:
 
 ~~~ {.tex}
 \documentclass[12pt,a4paper]{article}
@@ -226,3 +230,5 @@ however, let's pre-empt the case where you want to write a longer document.
 This is a point where LaTeX has some behaviour that needs getting used to.
 In particular, when first generating a table of contents,
 you will need to compile your document *twice*.
+
+
